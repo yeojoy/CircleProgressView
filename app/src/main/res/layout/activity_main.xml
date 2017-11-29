@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="me.yeojoy.circleprogressview.MainActivity">
 
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onButtonClick"
-        android:text="Start Animation"/>
+        android:text="Start Animation" />
 
     <me.yeojoy.circleprogressview.widget.CircleProgressView
         android:id="@+id/circle_progress_view"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_gravity="center_horizontal|bottom"
         android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
+        apps:background_line_color="#FF0000"
+        apps:background_line_width="20dp"
+        apps:has_shadow="false"
+        apps:line_color="#0000FF"
+        apps:line_width="8dp"
+        apps:style="stroke"
+        apps:has_animation="true"
+        apps:animation_duration="2000"
+        apps:value="70" />
 
 </LinearLayout>
